@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.10), transparent 30rem),
+    radial-gradient(circle at 88% 16%, rgba(249, 115, 22, 0.08), transparent 24rem),
+    #f8fbff;
+  color: #172033;
+  font-family: "Noto Sans TC", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(249, 115, 22, 0.22);
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-5 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-normal text-primary sm:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg;
+  }
+
+  .soft-card {
+    @apply rounded-2xl border border-blue-100/80 bg-white/90 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-glow;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-sm font-medium text-primary;
+  }
+}
